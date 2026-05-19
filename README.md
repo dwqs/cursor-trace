@@ -1,6 +1,6 @@
 # Cursor Trace Viewer
 
-Browse and visualize **Cursor AI Agent** session transcripts directly inside VS Code / Cursor. Inspect each turn, distinguish thinking from final responses, review tool calls, and export sessions as standalone HTML.
+Browse and visualize **Cursor AI Agent** session transcripts directly inside VS Code / Cursor. Inspect each turn, distinguish thinking from final responses, and export sessions as standalone HTML.
 
 [English](#features) · [中文](#功能)
 

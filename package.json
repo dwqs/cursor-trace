@@ -1,7 +1,7 @@
 {
   "name": "cursor-trace",
   "displayName": "Cursor Trace Viewer",
-  "description": "Browse and visualize Cursor AI agent session transcripts with thinking detection, tool call inspection, and HTML export.",
+  "description": "Browse and visualize Cursor AI agent session transcripts with thinking detection and HTML export.",
   "version": "1.0.0",
   "publisher": "dwqs",
   "repository": {
