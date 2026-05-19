@@ -1,0 +1,97 @@
+{
+  "name": "cursor-trace",
+  "displayName": "Cursor Trace Viewer",
+  "description": "Visualize Cursor Agent conversations — browse sessions, inspect turns, tool calls, and assistant reasoning.",
+  "version": "0.1.0",
+  "publisher": "cursor-trace",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorTrace.refreshSessions",
+        "title": "Cursor Trace: Refresh Sessions",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "cursorTrace.openSession",
+        "title": "Cursor Trace: Open Session"
+      },
+      {
+        "command": "cursorTrace.exportHtml",
+        "title": "Cursor Trace: Export as HTML",
+        "icon": "$(export)"
+      },
+      {
+        "command": "cursorTrace.deleteSession",
+        "title": "Delete Session",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "cursorTrace.deleteProjectSessions",
+        "title": "Delete All Sessions",
+        "icon": "$(trash)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "cursorTrace",
+          "title": "Cursor Trace",
+          "icon": "$(telescope)"
+        }
+      ]
+    },
+    "views": {
+      "cursorTrace": [
+        {
+          "id": "cursorTrace.sessions",
+          "name": "Agent Sessions"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "cursorTrace.refreshSessions",
+          "when": "view == cursorTrace.sessions",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "cursorTrace.exportHtml",
+          "when": "view == cursorTrace.sessions && viewItem == session",
+          "group": "inline"
+        },
+        {
+          "command": "cursorTrace.deleteSession",
+          "when": "view == cursorTrace.sessions && viewItem == session",
+          "group": "7_modification"
+        },
+        {
+          "command": "cursorTrace.deleteProjectSessions",
+          "when": "view == cursorTrace.sessions && viewItem == project",
+          "group": "7_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --sourcemap",
+    "watch": "pnpm build --watch",
+    "package": "pnpm build && vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.4.0"
+  }
+}
