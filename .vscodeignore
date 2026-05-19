@@ -1,0 +1,8 @@
+src/**/*.ts
+node_modules/**
+.gitignore
+tsconfig.json
+**/*.map
+.claude/**
+.cursor/**
+package.md
