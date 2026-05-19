@@ -21,7 +21,7 @@ Browse and visualize **Cursor AI Agent** session transcripts directly inside VS 
 
 ## Usage
 
-1. Install the extension (`.vsix` or marketplace).
+1. Install the extension (`cursor --install-extension dwqs.cursor-trace` or [from marketplace](https://open-vsx.org/extension/dwqs/cursor-trace)).
 2. Open the **Cursor Trace** view from the Activity Bar (telescope icon).
 3. Expand a project → click a session to open the viewer.
 4. Use **Show thinking** / **Collapse** on assistant steps when thinking is detected.
@@ -60,7 +60,7 @@ MIT — see [LICENSE](LICENSE) if present, or repository metadata.
 
 ## 使用方式
 
-1. 安装扩展。
+1. 安装扩展(`cursor --install-extension dwqs.cursor-trace` or [from marketplace](https://open-vsx.org/extension/dwqs/cursor-trace))。
 2. 在活动栏打开 **Cursor Trace**（望远镜图标）。
 3. 展开项目 → 点击会话打开查看器。
 4. 对含 thinking 的步骤使用 **Show thinking** / **Collapse**。
